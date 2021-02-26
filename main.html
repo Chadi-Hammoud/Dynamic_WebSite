@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+                $("a").hide("fast", function(){
+                    alert("Your request has been registered");
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("img").animate({left: '350px'});
+            });
+        });
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#close").click(function(){
+                $("#panel").slideUp("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="box1">
+        <div class ="imageBox">
+            <img src="img/car.png" alt="image">
+        </div>
+        <div class ="Box-content">
+            <h2>
+                Mercedes S-Class
+            </h2><br><br>
+
+            <div class="color">
+                <h3>Color:</h3>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="type">
+                <h3>Color Type:</h3>
+                <span>Mat</span>
+                <span>Methatic</span>
+
+            </div><br>
+            <button id="flip">
+               About
+            </button>
+            <a href="#">Buy Now</a>
+            <button id="btn1">
+                Drive
+            </button>
+        </div>
+
+    </div>
+    <div id="panel">
+        <h1>
+            <span>Dynamic Website</span>
+        </h1>
+        <h3>
+            <span>Edit by:</span>
+        </h3>
+        <img src="img/signe.png" alt="signature" width="70" height="50">
+        <strong> Chadi M. Hammoud</strong>
+       <sub>
+           Feb/2021
+       </sub>
+        <br>
+
+        <button id="close">Close</button>
+    </div>
+</div>
+
+</body>
+</html>

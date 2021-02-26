@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Calisto MT";
+    }
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+    }
+.container{
+    position: relative;
+    }
+.container .box1{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+
+    }
+.container .box1:before{
+    content:'' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6cd419;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+    }
+.container .box1:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+.container .box1:after{
+    content: "Mercedes<br/>By Chadi";
+    font-family:serif;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    font-size:5em;
+    font-weight:30;
+    font-style:italic;
+    color: rgba(255, 255, 255, 0.04);
+    }
+.container .box1 .imageBox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height:100px;
+    transition:0.5s;
+    }
+.container .box1:hover .imageBox {
+    top:0;
+    transform: translateY(0%);
+    }
+.container .box1 .imageBox img{
+    position:absolute;
+    top: 30%;
+    left:10%;
+    transform: translate(-50% 50%);
+    width: 230px;
+}
+.container .box1 .Box-content{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container .box1:hover .Box-content{
+    height: 210px;
+}
+.container .box1 .Box-content h2{
+    position:relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#fff;
+}
+.container .box1 .Box-content .type ,
+.container .box1 .Box-content .color {
+    display: flex;
+    justify-content: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .box1:hover .Box-content .color {
+    opacity:1 ;
+    visibility: visible;
+    transition-delay: 0.75s;
+}
+.container .box1:hover .Box-content .type {
+    opacity:1 ;
+    visibility: visible;
+    transition-delay: 1.5s;
+}
+.container .box1 .Box-content .type h3 ,
+.container .box1 .Box-content .color h3{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.container .box1 .Box-content .type span{
+    width: auto;
+    height: auto;
+    padding: 2px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color:#111;
+    background:#fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    border-radius: 4px;
+    opacity:0.5;
+    cursor: pointer;
+}
+.container .box1 .Box-content .type span:hover{
+    background: #9bdc28;
+}
+.container .box1 .Box-content .color span{
+    width:20px;
+    height: 20px;
+    background: #1302ff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor:pointer;
+}
+.container .box1 .Box-content .color span:nth-child(2) {
+    background: #ff0000;
+}
+.container .box1 .Box-content .color span:nth-child(3) {
+    background: #2dff07;
+}
+.container .box1 .Box-content a ,
+.container .box1 .Box-content button{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: #111111;
+    opacity:0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.container .box1:hover .Box-content a ,
+.container .box1:hover .Box-content button#flip,
+.container .box1:hover .Box-content button#btn1{
+    background: #9bdc28;
+    opacity:1;
+    transform: translateY(0px);
+    transition-delay: 2s;
+}
+.container .box1:hover .Box-content button #flip{
+    transition-delay: 2.5s;
+}
+.container #panel{
+    width: 220px;
+    height: auto;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    opacity: 0.9;
+    color: #fff;
+    font-size: 14px;
+}
+.container #panel img{
+    align-items: center;
+}
+#close{
+
+}
